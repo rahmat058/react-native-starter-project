@@ -66,6 +66,11 @@
     "react-test-renderer": "^16.10.1",
     "sinon": "^7.5.0"
   },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
   "jest": {
     "preset": "react-native"
   }
