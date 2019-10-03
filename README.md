@@ -1,7 +1,5 @@
 # React Native BoilerPlate Starter 2019 🚀
 
-[![npm version](https://img.shields.io/npm/v/react-native-user-avatar.svg?style=flat-square)](https://www.npmjs.com/package/react-native-starter-project)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-user-avatar.svg?style=flat-square)](https://www.npmjs.com/package/react-native-starter-project)
 ![](https://img.shields.io/github/stars/rahmat058/react-native-starter-project.svg) ![](https://img.shields.io/github/issues/rahmat058/react-native-starter-project.svg?style=flat-square)
 [![dependencies Status](https://david-dm.org/rahmat058/react-native-starter-project/status.svg)](https://david-dm.org/rahmat058/react-native-starter-project)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://img.shields.io/badge/license-MIT-brightgreen.svg)
