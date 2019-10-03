@@ -15,6 +15,7 @@ A boilerplate for creating React Native App in Node.js using React Native. It is
   <img src="https://user-images.githubusercontent.com/32190295/66154764-05bbcd00-e640-11e9-9fe9-96d7c6253492.png" height="45" hspace="10">
   <img src="https://user-images.githubusercontent.com/32190295/66155138-cf328200-e640-11e9-9177-8c576c5fe89b.png" height="45" hspace="10">
   <img src="https://user-images.githubusercontent.com/32190295/66155628-e58d0d80-e641-11e9-85bf-ccbd4b01e22b.png" height="45" hspace="10">
+  <img src="https://user-images.githubusercontent.com/32190295/66155933-7c59ca00-e642-11e9-9ff6-e3c0d957dc25.png" height="45" hspace="10">
 </div>
 
 <br />
