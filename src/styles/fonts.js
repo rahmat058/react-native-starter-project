@@ -1,6 +1,6 @@
 export default {
-  primaryLight: 'Lato-Light',
-  primaryRegular: 'Lato-Regular',
-  primaryBold: 'Lato-Bold',
-  primarySemiBold: 'Lato-SemiBold',
+  regular: 'Lato-Regular',
+  medium: 'Lato-Medium',
+  light: 'Lato-Light',
+  thin: 'Lato-thin',
 };

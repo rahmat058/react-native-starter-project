@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+
+import { RootAppNavigator } from '../navigators';
 
 const AppView = () => {
   return (
     <View style={styles.container}>
-      <Text>Welcome Screen</Text>
+      <RootAppNavigator />
     </View>
   );
 };
