@@ -16,7 +16,7 @@ A boilerplate for creating React Native App in Node.js using React Native. It is
 
 ## Technologies
 
-- [Node.js](https://nodejs.org/en/), [Express](http://expressjs.com/), [Javascript](https://github.com/sorrycc/awesome-javascript), [npm](https://www.npmjs.com/) - core platform
+- [Node.js](https://nodejs.org/en/), [Javascript](https://github.com/sorrycc/awesome-javascript), [npm](https://www.npmjs.com/) - core platform
 - [ReactNative](https://facebook.github.io/react-native/) - build for native appp both android and ios 
 - [React-Native-Paper](https://reactnativepaper.com/) - for material ui design 
 - [Redux](https://redux.js.org/) - store management for app
@@ -34,6 +34,7 @@ A boilerplate for creating React Native App in Node.js using React Native. It is
 ### **Initial Setup**
 ```sh
 
+```
 
 ## Highly Inspired by
 
