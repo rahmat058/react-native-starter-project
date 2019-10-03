@@ -1,12 +1,26 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+
+import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { colors } from './src/styles';
+import { colors, fonts } from './src/styles';
 
 import { store, persistor } from './src/store';
 
 import AppView from './src/screens/AppView';
+
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: colors.primary,
+    accent: colors.primaryLight,
+  },
+  fonts: {
+    ...fonts,
+  },
+};
 
 export default function App() {
   return (
@@ -14,12 +28,14 @@ export default function App() {
       <PersistGate
         loading={
           <View style={styles.container}>
-            <ActivityIndicator color={colors.red} />
+            <ActivityIndicator color={colors.secondary} />
           </View>
         }
         persistor={persistor}
       >
-        <AppView />
+        <PaperProvider theme={theme}>
+          <AppView />
+        </PaperProvider>
       </PersistGate>
     </Provider>
   );
