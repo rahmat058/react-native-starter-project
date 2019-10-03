@@ -1,4 +1,4 @@
-# Node Rest Starter 🌿
+# React Native Starter 🌿
 
 [![dependencies Status](https://david-dm.org/rahmat058/react-native-starter-project/status.svg)](https://david-dm.org/rahmat058/react-native-starter-project)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://img.shields.io/badge/license-MIT-brightgreen.svg)
