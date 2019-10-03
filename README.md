@@ -94,7 +94,7 @@ $ yarn run android:build
 
 #### Bugs? Comments? Features? PRs and Issues happily welcomed!
 
-- :star: Star our GitHub repo
+- :star: Star my GitHub repo
 
 * :wrench: Create Fixes, suggest new features or update docs
 
