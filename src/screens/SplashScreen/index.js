@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
 

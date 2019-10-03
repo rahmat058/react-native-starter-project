@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
