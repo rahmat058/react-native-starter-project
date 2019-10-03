@@ -2,8 +2,8 @@
 
 ![](https://img.shields.io/github/stars/rahmat058/react-native-starter-project.svg) ![](https://img.shields.io/github/issues/rahmat058/react-native-starter-project.svg?style=flat-square)
 [![dependencies Status](https://david-dm.org/rahmat058/react-native-starter-project/status.svg)](https://david-dm.org/rahmat058/react-native-starter-project)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 [![Build Status](https://travis-ci.org/rahmat058/react-native-user-avatar.svg?branch=master)](https://travis-ci.org/rahmat058/react-native-starter-project)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
 A boilerplate for creating React Native App in Node.js using React Native. It is written with all the best practices in the world :blush:
 
@@ -12,6 +12,9 @@ A boilerplate for creating React Native App in Node.js using React Native. It is
 <div align="center">
   <img src="https://user-images.githubusercontent.com/5141132/50723408-8aa4a500-1107-11e9-9fe6-fe5482102bc9.png" height="45" hspace="10">
   <img src="https://user-images.githubusercontent.com/5141132/50723399-7365b780-1107-11e9-9bc4-7706f631c5e8.png" height="45" hspace="10">
+  <img src="https://user-images.githubusercontent.com/32190295/66154764-05bbcd00-e640-11e9-9fe9-96d7c6253492.png" height="45" hspace="10">
+  <img src="https://user-images.githubusercontent.com/32190295/66155138-cf328200-e640-11e9-9177-8c576c5fe89b.png" height="45" hspace="10">
+  <img src="https://user-images.githubusercontent.com/32190295/66155436-6d264c80-e641-11e9-8619-50ceb7e2b616.png" height="45" hspace="10">
 </div>
 
 <br />
@@ -23,7 +26,7 @@ A boilerplate for creating React Native App in Node.js using React Native. It is
 ## Technologies
 
 - [Node.js](https://nodejs.org/en/), [Javascript](https://github.com/sorrycc/awesome-javascript), [npm](https://www.npmjs.com/) - core platform
-- [ReactNative](https://facebook.github.io/react-native/) - build for native appp both android and ios 
+- [React Native](https://facebook.github.io/react-native/) - build for native appp both android and ios 
 - [React-Native-Paper](https://reactnativepaper.com/) - material design components using
 - [Redux](https://redux.js.org/) - store management for app
 - [Moment.js](https://momentjs.com/) - parse, validate, manipulate, and display dates and times in javaScript.
