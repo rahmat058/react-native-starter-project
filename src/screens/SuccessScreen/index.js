@@ -1,68 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Animated, Dimensions } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, StyleSheet } from 'react-native';
+import LottieView from 'lottie-react-native';
 
-const appLogo = require('../../../assets/images/app-logo.png');
-
-const { height } = Dimensions.get('window');
+const Success = require('../../../assets/images/success.json');
 
 const SuccessScreen = props => {
-  const state = successScreenScreenHooks(props);
+  successScreenScreenHooks(props);
 
   return (
-    <>
-      <View style={styles.container}>
-        <Animated.Image
-          source={appLogo}
-          style={{ ...styles.logo, opacity: state.logoOpacity }}
-          resizeMode="contain"
-        />
-      </View>
-    </>
-  );
+    <View style={styles.container}>
+      <LottieView source={Success} autoPlay loop />
+    </View>
+  )
+
 };
 
 const successScreenScreenHooks = props => {
-  const [logoOpacity, setLogoOpacity] = useState(new Animated.Value(0));
-  const [titleMarginTop, setTitleMarginTop] = useState(
-    new Animated.Value(height / 2),
-  );
-
-  useEffect(() => {
-    Animated.sequence([
-      // animation by sequence
-      Animated.timing(logoOpacity, {
-        toValue: 1,
-        duration: 1500,
-      }),
-      // animate text
-      Animated.timing(titleMarginTop, {
-        toValue: 10,
-        duration: 1000,
-      }),
-    ]).start(() => {
-      props.navigation.navigate('LoginScreen');
-    });
-  }, []);
-
-  return {
-    logoOpacity,
-    setLogoOpacity,
-    titleMarginTop,
-    setTitleMarginTop,
-  };
+  // useEffect(() => {
+  //   props.navigation.navigate('LoginScreen');
+  // }, []);
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  logo: {
-    flex: 1,
-    width: 80,
-    height: 80,
-  },
+    flex: 1
+  }
 });
 
 export default SuccessScreen;

@@ -43,7 +43,7 @@ const LoginScreen = props => {
             fontSize: 16
         }}
             mode="contained"
-            onPress={() => console.log('Pressed')}
+            onPress={() => props.navigation.navigate('SuccessScreen')}
           >
           Login
           </Button>
