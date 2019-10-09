@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { createStackNavigator } from 'react-navigation-stack';
 
 import SplashScreen from '../screens/SplashScreen';

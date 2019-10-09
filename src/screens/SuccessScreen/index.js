@@ -16,9 +16,9 @@ const SuccessScreen = props => {
 };
 
 const successScreenScreenHooks = props => {
-  // useEffect(() => {
-  //   props.navigation.navigate('LoginScreen');
-  // }, []);
+  useEffect(() => {
+    props.navigation.navigate('App');
+  }, []);
 };
 
 const styles = StyleSheet.create({
