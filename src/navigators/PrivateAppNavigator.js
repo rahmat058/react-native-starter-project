@@ -2,6 +2,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import customDrawerContentComponent from './CustomDrawerComponent';
+import { colors } from '../styles';
 
 import ScreenOne from '../screens/HomeScreen/ScreenOne';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -21,7 +22,7 @@ export const AppDrawerNavigator = createDrawerNavigator(
       screen: HomeStackNavigator,
       navigationOptions: ({ navigation }) => ({
         drawerLockMode:
-          navigation.state.index > 0 ? 'locked-closed' : 'unlocked',
+        navigation.state.index > 0 ? 'locked-closed' : 'unlocked',
         title: `Home`,
         // drawerIcon: ({ tintColor }) => (
         //   <Icon name="ios-home" style={{ fontSize: 24, color: tintColor }} />
@@ -48,10 +49,10 @@ export const AppDrawerNavigator = createDrawerNavigator(
     drawerToggleRoute: 'DrawerToggle',
     drawerWidth: 300,
     contentOptions: {
-      activeTintColor: '#16a085',
-      inactiveTintColor: '#919191',
-      activeBackgroundColor: '#ebebeb',
-      inactiveBackgroundColor: '#fff',
+      activeTintColor: colors.primary,
+      inactiveTintColor: colors.gray1,
+      activeBackgroundColor: colors.bluish,
+      inactiveBackgroundColor: colors.white,
       itemStyle: {
         height: 40,
         border: 60,
