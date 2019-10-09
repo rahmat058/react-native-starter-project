@@ -5,11 +5,12 @@ import { AuthStackNavigator } from './PublicAuthNavigator';
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
 
 const AppSwitchNavigator = createSwitchNavigator({
-  AuthLoadingScreen: AuthLoadingScreen,
+  AuthLoadingScreen,
   Auth: AuthStackNavigator,
   // App: {
   //   screen: AppDrawerNavigator,
   // },
 });
 
+// eslint-disable-next-line import/prefer-default-export
 export const RootAppNavigator = createAppContainer(AppSwitchNavigator);

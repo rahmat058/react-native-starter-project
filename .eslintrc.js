@@ -1,7 +1,3 @@
-// module.exports = {
-//   root: true,
-//   extends: '@react-native-community',
-// };
 module.exports = {
   root: true,
   extends: ["airbnb", "prettier"],
@@ -16,7 +12,8 @@ module.exports = {
     "global-require": "off",
     "no-underscore-dangle": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    // "no-unused-vars": ['error', { "args": "none" }]
   }
 };
 

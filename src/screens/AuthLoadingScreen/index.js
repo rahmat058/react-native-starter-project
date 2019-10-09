@@ -1,17 +1,17 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import AsyncStorage from '@react-native-community/async-storage';
+// import AsyncStorage from '@react-native-community/async-storage';
 
 const AuthLoadingScreen = props => {
   const loadApp = async () => {
     try {
-      const value = await AsyncStorage.getItem('userInfo');
-      let userInfo = JSON.parse(value);
+      // const value = await AsyncStorage.getItem('userInfo');
+      // const userInfo = JSON.parse(value);
 
-      const screen = userInfo.token !== '' ? 'App' : 'Auth';
-      props.navigation.navigate(screen);
+      // const screen = userInfo.token !== '' ? 'App' : 'Auth';
+      // props.navigation.navigate(screen);
+      props.navigation.navigate('SplashScreen');
     } catch (error) {
       console.log(error.message);
     }

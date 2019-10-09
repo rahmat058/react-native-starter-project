@@ -1,7 +1,9 @@
+/* eslint-disable import/prefer-default-export */
 import { createStackNavigator } from 'react-navigation-stack';
 
 import SplashScreen from '../screens/SplashScreen';
 import LoginScreen from '../screens/LoginScreen';
+import SuccessScreen from '../screens/SuccessScreen';
 
 export const AuthStackNavigator = createStackNavigator({
   SplashScreen: {
@@ -12,6 +14,12 @@ export const AuthStackNavigator = createStackNavigator({
   },
   LoginScreen: {
     screen: LoginScreen,
+    navigationOptions: () => ({
+      header: null,
+    }),
+  },
+  SuccessScreen: {
+    screen: SuccessScreen,
     navigationOptions: () => ({
       header: null,
     }),

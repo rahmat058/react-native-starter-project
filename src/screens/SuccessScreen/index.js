@@ -5,8 +5,8 @@ const appLogo = require('../../../assets/images/app-logo.png');
 
 const { height } = Dimensions.get('window');
 
-const SplashScreen = props => {
-  const state = splashScreenHooks(props);
+const SuccessScreen = props => {
+  const state = successScreenScreenHooks(props);
 
   return (
     <>
@@ -21,7 +21,7 @@ const SplashScreen = props => {
   );
 };
 
-const splashScreenHooks = props => {
+const successScreenScreenHooks = props => {
   const [logoOpacity, setLogoOpacity] = useState(new Animated.Value(0));
   const [titleMarginTop, setTitleMarginTop] = useState(
     new Animated.Value(height / 2),
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SplashScreen;
+export default SuccessScreen;

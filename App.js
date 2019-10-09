@@ -26,11 +26,11 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate
-        loading={
+        loading={(
           <View style={styles.container}>
-            <ActivityIndicator color={colors.secondary} />
+            <ActivityIndicator color={colors.primary} />
           </View>
-        }
+        )}
         persistor={persistor}
       >
         <PaperProvider theme={theme}>
