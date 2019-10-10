@@ -5,14 +5,14 @@ import { Typography, Colors } from 'react-native-ui-lib';
 
 import { Icon } from '../../utils/fonttello/setFonttelloIcon';
 
-const SettingsScreen = props => {
+const ScreenOne = props => {
   const state = screenOneHooks(props);
 
   return (
     <>
       <Appbar.Header>
-        <Appbar.Action icon={state.barIcon} onPress={state.toggleDrawer} />
-        <Appbar.Content title="Settings" />
+        <Appbar.BackAction onPress={state.goBack} />
+        <Appbar.Content title="Sub Home" />
       </Appbar.Header>
 
       <View
@@ -30,7 +30,7 @@ const SettingsScreen = props => {
             },
           ]}
         >
-          Settings Screen
+          Sub Home
         </Text>
       </View>
     </>
@@ -40,14 +40,14 @@ const SettingsScreen = props => {
 const screenOneHooks = props => {
   const barIcon = () => <Icon name="bars" size={25} color={Colors.white} />;
 
-  const toggleDrawer = () => {
-    props.navigation.toggleDrawer();
+  const goBack = () => {
+    props.navigation.pop();
   };
 
   return {
     barIcon,
-    toggleDrawer,
+    goBack,
   };
 };
 
-export default SettingsScreen;
+export default ScreenOne;

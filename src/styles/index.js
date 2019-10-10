@@ -33,7 +33,7 @@ Typography.loadTypographies({
         fontWeight: 'bold',
       },
       android: {
-        fontFamily: fonts.primaryBold,
+        fontFamily: fonts.primary,
       },
     }),
   },

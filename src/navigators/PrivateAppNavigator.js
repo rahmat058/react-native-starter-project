@@ -7,11 +7,18 @@ import { colors } from '../styles';
 import { Icon } from '../utils/fonttello/setFonttelloIcon';
 
 import ScreenOne from '../screens/HomeScreen/ScreenOne';
+import ScreenTwo from '../screens/HomeScreen/ScreenTwo';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStackNavigator = createStackNavigator({
   Home: {
     screen: ScreenOne,
+    navigationOptions: () => ({
+      header: null
+    }),
+  },
+  SubHome: {
+    screen: ScreenTwo,
     navigationOptions: () => ({
       header: null
     }),
