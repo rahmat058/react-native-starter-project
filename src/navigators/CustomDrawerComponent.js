@@ -6,7 +6,7 @@ import { Colors } from 'react-native-ui-lib';
 import { Icon } from '../utils/fonttello/setFonttelloIcon';
 
 const customDrawerContentComponent = props => {
-  const state = customDrawerContentComponentHooks(props);
+  customDrawerContentComponentHooks(props);
 
   return (
     <>
@@ -18,7 +18,7 @@ const customDrawerContentComponent = props => {
         <Icon name="sign-out-alt" size={25} color={Colors.red} />
         <Text
           style={{ color: Colors.red, fontSize: 20, paddingLeft: 30 }}
-          onPress={state.signOut}
+          onPress={() => props.navigation.navigate('LoginScreen')}
         >
           Sign Out
         </Text>
@@ -28,13 +28,7 @@ const customDrawerContentComponent = props => {
 };
 
 const customDrawerContentComponentHooks = props => {
-  const signOut = () => {
-    props.navigation.navigate('LoginScreen');
-  };
-
-  return {
-    signOut,
-  };
+  console.log('props: ', props);
 };
 
 export default customDrawerContentComponent;
