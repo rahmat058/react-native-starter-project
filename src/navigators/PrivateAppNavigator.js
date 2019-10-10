@@ -8,6 +8,7 @@ import { Icon } from '../utils/fonttello/setFonttelloIcon';
 
 import ScreenOne from '../screens/HomeScreen/ScreenOne';
 import ScreenTwo from '../screens/HomeScreen/ScreenTwo';
+import AboutScreen from '../screens/AboutScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStackNavigator = createStackNavigator({
@@ -25,6 +26,15 @@ const HomeStackNavigator = createStackNavigator({
   },
 });
 
+const AboutStackNavigator = createStackNavigator({
+  About: {
+    screen: AboutScreen,
+    navigationOptions: () => ({
+      header: null
+    }),
+  },
+});
+
 
 export const AppDrawerNavigator = createDrawerNavigator(
   {
@@ -36,6 +46,17 @@ export const AppDrawerNavigator = createDrawerNavigator(
         title: `Home`,
         drawerIcon: ({ tintColor }) => (
           <Icon name="home" size={25} color={tintColor} />
+        ),
+      }),
+    },
+    AboutStackNavigator: {
+      screen: AboutStackNavigator,
+      navigationOptions: ({ navigation }) => ({
+        drawerLockMode:
+          navigation.state.index > 0 ? 'locked-closed' : 'unlocked',
+        title: `About`,
+        drawerIcon: ({ tintColor }) => (
+          <Icon name="user-circle" size={25} color={tintColor} />
         ),
       }),
     },
