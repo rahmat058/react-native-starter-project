@@ -1,8 +1,10 @@
+import React from 'react';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import customDrawerContentComponent from './CustomDrawerComponent';
 import { colors } from '../styles';
+import { Icon } from '../utils/fonttello/setFonttelloIcon';
 
 import ScreenOne from '../screens/HomeScreen/ScreenOne';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -22,23 +24,20 @@ export const AppDrawerNavigator = createDrawerNavigator(
       screen: HomeStackNavigator,
       navigationOptions: ({ navigation }) => ({
         drawerLockMode:
-        navigation.state.index > 0 ? 'locked-closed' : 'unlocked',
+          navigation.state.index > 0 ? 'locked-closed' : 'unlocked',
         title: `Home`,
-        // drawerIcon: ({ tintColor }) => (
-        //   <Icon name="ios-home" style={{ fontSize: 24, color: tintColor }} />
-        // ),
+        drawerIcon: ({ tintColor }) => (
+          <Icon name="home" size={25} color={tintColor} />
+        ),
       }),
     },
     Settings: {
       screen: SettingsScreen,
-      // navigationOptions: () => ({
-      //   drawerIcon: ({ tintColor }) => (
-      //     <Icon
-      //       name="ios-settings"
-      //       style={{ fontSize: 24, color: tintColor }}
-      //     />
-      //   ),
-      // }),
+      navigationOptions: () => ({
+        drawerIcon: ({ tintColor }) => (
+          <Icon name="cog" size={25} color={tintColor} />
+        ),
+      }),
     },
   },
   {
