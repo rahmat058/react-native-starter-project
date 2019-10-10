@@ -12,5 +12,4 @@ const AppSwitchNavigator = createSwitchNavigator({
   },
 });
 
-// eslint-disable-next-line import/prefer-default-export
 export const RootAppNavigator = createAppContainer(AppSwitchNavigator);

@@ -1,6 +1,3 @@
-/**
- * @flow
- */
 import { Typography, Colors, Assets } from 'react-native-ui-lib';
 import { Dimensions, Platform } from 'react-native';
 

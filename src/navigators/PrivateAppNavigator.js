@@ -13,10 +13,11 @@ const HomeStackNavigator = createStackNavigator({
   Home: {
     screen: ScreenOne,
     navigationOptions: () => ({
-      header: null,
+      header: null
     }),
   },
 });
+
 
 export const AppDrawerNavigator = createDrawerNavigator(
   {
