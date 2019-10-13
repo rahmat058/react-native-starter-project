@@ -20,6 +20,7 @@ const theme = {
   fonts: {
     ...fonts,
   },
+  roundness: 10,
 };
 
 export default function App() {

@@ -40,7 +40,7 @@ const splashScreenHooks = props => {
         duration: 1000,
       }),
     ]).start(() => {
-      props.navigation.navigate('LoginScreen');
+      props.navigation.navigate('WelcomeScreen');
     });
   }, []);
 

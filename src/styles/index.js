@@ -26,21 +26,26 @@ Typography.loadTypographies({
     }),
   },
   h1: {
-    fontSize: 34,
+    fontSize: 30,
     ...Platform.select({
       ios: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.primaryBold,
         fontWeight: 'bold',
       },
       android: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.primaryBold,
       },
     }),
   },
   rubik18: {
     fontFamily: fonts.primary,
     fontSize: 18,
-    lineHeight: 22,
+    fontWeight: 'bold',
+  },
+  rubik16: {
+    fontFamily: fonts.primary,
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   rubik20Bold: {
     fontFamily: fonts.primary,
@@ -80,7 +85,7 @@ Typography.loadTypographies({
         fontWeight: 'bold',
       },
       android: {
-        fontFamily: fonts.primaryBold,
+        fontFamily: fonts.primary,
       },
     }),
   },
@@ -98,7 +103,7 @@ Typography.loadTypographies({
         fontWeight: '400',
       },
       android: {
-        fontFamily: fonts.primaryAndroid,
+        fontFamily: fonts.primary,
       },
     }),
   },

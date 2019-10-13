@@ -1,8 +1,8 @@
 export default {
-  primary: 'Lato-Regular',
-  primaryLight: 'Lato-Light',
-  primaryRegular: 'Lato-Regular',
-  primaryBold: 'Lato-Bold',
-  primarySemiBold: 'Lato-SemiBold',
-  primaryMedium: 'Lato-Medium'
+  primary: 'Ubuntu-Medium',
+  primaryLight: 'Ubuntu-Light',
+  primaryRegular: 'Ubuntu-Regular',
+  primaryBold: 'Ubuntu-Bold',
+  primarySemiBold: 'Ubuntu-BoldItalic',
+  primaryMedium: 'Ubuntu-MediumItalic'
 };

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import LottieView from 'lottie-react-native';
+import { Colors, Typography } from 'react-native-ui-lib';
 
-const Home = require('../../../assets/images/home.json');
+const Me = require('../../../assets/images/me-at-office.json');
 
 const LoginScreen = props => {
   const state = logInScreenHooks(props);
@@ -11,7 +12,7 @@ const LoginScreen = props => {
   return (
     <View style={styles.container}>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <LottieView source={Home} autoPlay loop />
+        <LottieView source={Me} autoPlay loop />
       </View>
 
       <View style={{ flex: 1.5 }}>
@@ -34,12 +35,19 @@ const LoginScreen = props => {
         </View>
         <View style={{ marginVertical: 15 }}>
           <Button
-            style={{
+            contentStyle={{
               paddingVertical: 10,
-              fontSize: 16,
             }}
             mode="contained"
             onPress={() => props.navigation.navigate('SuccessScreen')}
+            labelStyle={[
+              Typography.h1,
+              {
+                fontSize: 58,
+                color: Colors.red
+              }
+            ]}
+            color={Colors.primary}
           >
             Login
           </Button>
