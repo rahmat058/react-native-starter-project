@@ -6,22 +6,15 @@ import {
   Image,
   ScrollView,
   Dimensions,
-  TouchableOpacity,
 } from 'react-native';
 import { Button, Surface, TextInput } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
 
 const { height } = Dimensions.get('window');
 
-const LoginScreen = props => {
+const SignUpScreen = props => {
   const state = signUpInScreenHooks(props);
   const scrollEnabled = state.screenHeight > height;
-
-  const goSignUpScreen = () => (
-    <TouchableOpacity onPress={() => props.navigation.navigate('SignUpScreen')}>
-      <Text style={{ color: Colors.primary }}> Sign up</Text>
-    </TouchableOpacity>
-  );
 
   return (
     <ScrollView
@@ -40,7 +33,7 @@ const LoginScreen = props => {
               },
             ]}
           >
-            Login Now
+            Sign Up
           </Text>
           <Text
             style={[
@@ -51,7 +44,8 @@ const LoginScreen = props => {
               },
             ]}
           >
-            Please login to continue using our app.
+            Please Registration witn email and sign up {'\n'} to continue using
+            our app.
           </Text>
         </View>
         <View style={styles.contentLogoWrapper}>
@@ -96,7 +90,7 @@ const LoginScreen = props => {
             or login with {'\n'} enail
           </Text>
         </View>
-
+        
         <View style={styles.formWrapper}>
           <TextInput
             label="Email"
@@ -121,7 +115,7 @@ const LoginScreen = props => {
                 paddingVertical: 10,
               }}
               mode="contained"
-              onPress={() => props.navigation.navigate('SuccessScreen')}
+              onPress={() => props.navigation.navigate('LoginScreen')}
             >
               <Text
                 style={[
@@ -131,7 +125,7 @@ const LoginScreen = props => {
                   },
                 ]}
               >
-                Login
+                Sign up
               </Text>
             </Button>
 
@@ -144,9 +138,8 @@ const LoginScreen = props => {
                 },
               ]}
             >
-              Don't have an account?
-              {/* { goSignUpScreen } */}
-              <Text style={{ color: Colors.primary }}> Sign up</Text>
+              You already have an account?
+              <Text style={{ color: Colors.primary }}> Login</Text>
             </Text>
           </View>
         </View>
@@ -223,4 +216,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default SignUpScreen;

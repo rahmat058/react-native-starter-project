@@ -56,7 +56,7 @@ Typography.loadTypographies({
   rubik24Bold: {
     fontFamily: fonts.primary,
     fontSize: 24,
-    lineHeight: 22,
+    lineHeight: 25,
     fontWeight: 'bold',
   },
   h1Rubik: {

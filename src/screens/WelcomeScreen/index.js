@@ -87,7 +87,7 @@ const WelcomeScreen = props => {
               paddingVertical: 10,
             }}
             mode="contained"
-            onPress={() => props.navigation.navigate('LoginScreen')}
+            onPress={() => props.navigation.navigate('SignUpScreen')}
           >
             <Text
               style={[
@@ -97,7 +97,7 @@ const WelcomeScreen = props => {
                 },
               ]}
             >
-              Login
+              Sign up
             </Text>
           </Button>
 
