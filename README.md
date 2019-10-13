@@ -29,6 +29,7 @@ A boilerplate for creating React Native App in Node.js using React Native. It is
 
 - [Node.js](https://nodejs.org/en/), [Javascript](https://github.com/sorrycc/awesome-javascript), [npm](https://www.npmjs.com/) - core platform
 - [React Native](https://facebook.github.io/react-native/) - build for native appp both android and ios 
+- [React Navigation](https://reactnavigation.org/) - routing and navigation for your react native apps
 - [React-Native-Paper](https://reactnativepaper.com/) - material design components using
 - [Redux](https://redux.js.org/) - store management for app
 - [Moment.js](https://momentjs.com/) - parse, validate, manipulate, and display dates and times in javaScript.
