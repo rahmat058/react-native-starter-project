@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { TextInput, Button, Avatar  } from 'react-native-paper';
+import { TextInput, Button } from 'react-native-paper';
+import LottieView from 'lottie-react-native';
+
+const Home = require('../../../assets/images/home.json');
 
 const LoginScreen = props => {
   const state = logInScreenHooks(props);
@@ -8,14 +11,7 @@ const LoginScreen = props => {
   return (
     <View style={styles.container}>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Avatar.Text
-          style={{
-          width: 150,
-          height: 150,
-        }}
-          size={60}
-          label="Logo"
-        />
+        <LottieView source={Home} autoPlay loop />
       </View>
 
       <View style={{ flex: 1.5 }}>
@@ -33,19 +29,19 @@ const LoginScreen = props => {
             type="text"
             mode="outlined"
             onChangeText={text => state.setPassword({ text })}
-            style={{marginTop: 10}}
+            style={{ marginTop: 10 }}
           />
         </View>
-        <View style={{marginVertical: 15 }}>
+        <View style={{ marginVertical: 15 }}>
           <Button
             style={{
-            paddingVertical: 10,
-            fontSize: 16
-        }}
+              paddingVertical: 10,
+              fontSize: 16,
+            }}
             mode="contained"
             onPress={() => props.navigation.navigate('SuccessScreen')}
           >
-          Login
+            Login
           </Button>
         </View>
       </View>
@@ -61,7 +57,7 @@ const logInScreenHooks = props => {
     email,
     setEmail,
     password,
-    setPassword
+    setPassword,
   };
 };
 
