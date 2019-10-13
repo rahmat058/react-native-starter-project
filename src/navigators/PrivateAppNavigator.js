@@ -1,4 +1,5 @@
 import React from 'react';
+import { Dimensions } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -10,6 +11,9 @@ import ScreenOne from '../screens/HomeScreen/ScreenOne';
 import ScreenTwo from '../screens/HomeScreen/ScreenTwo';
 import AboutScreen from '../screens/AboutScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+
+const { width } = Dimensions.get('window');
+const drawerWidth = width - 80;
 
 const HomeStackNavigator = createStackNavigator({
   Home: {
@@ -75,7 +79,8 @@ export const AppDrawerNavigator = createDrawerNavigator(
     drawerOpenRoute: 'DrawerOpen',
     drawerCloseRoute: 'DrawerClose',
     drawerToggleRoute: 'DrawerToggle',
-    drawerWidth: 300,
+    // eslint-disable-next-line object-shorthand
+    drawerWidth: drawerWidth,
     contentOptions: {
       activeTintColor: colors.primary,
       inactiveTintColor: colors.gray1,
