@@ -204,14 +204,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 5,
   },
-  // formSurface: {
-  //   padding: 10,
-  //   height: 70,
-  //   width: 70,
-  //   justifyContent: 'center',
-  //   elevation: 10,
-  //   marginHorizontal: 10,
-  // },
 });
 
 export default SignUpScreen;

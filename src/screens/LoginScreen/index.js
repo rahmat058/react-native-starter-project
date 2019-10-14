@@ -194,14 +194,6 @@ const styles = StyleSheet.create({
   forgotSection: {
     alignItems: 'flex-end'
   }
-  // formSurface: {
-  //   padding: 10,
-  //   height: 70,
-  //   width: 70,
-  //   justifyContent: 'center',
-  //   elevation: 10,
-  //   marginHorizontal: 10,
-  // },
 });
 
 export default LoginScreen;

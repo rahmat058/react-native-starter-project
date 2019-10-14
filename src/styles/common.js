@@ -3,7 +3,7 @@ import { StyleSheet, StatusBar, Platform } from 'react-native';
 import colors from './colors';
 
 // eslint-disable-next-line no-undef
-export default CommonStyles =  StyleSheet.create({
+export default CommonStyles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: colors.white,
@@ -11,6 +11,6 @@ export default CommonStyles =  StyleSheet.create({
   },
   wrapper: {
     flex: 1,
-    marginHorizontal: 20
-  }
+    marginHorizontal: 20,
+  },
 });

@@ -3,7 +3,6 @@ import {
   StyleSheet,
   SafeAreaView,
   StatusBar,
-  View,
   ScrollView,
   Dimensions,
 } from 'react-native';
@@ -15,6 +14,7 @@ const Container = props => {
   const state = containerHooks(props);
 
   const scrollEnabled = state.screenHeight > height;
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor='rgba(117,124,251,.8)' />
@@ -22,26 +22,20 @@ const Container = props => {
         style={{ flex: 1 }}
         contentContainerStyle={styles.scrollview}
         scrollEnabled={scrollEnabled}
-        onContentSizeChange={state.onContentSizeChange}
+        onContentSizeChange={(contentWidth, contentHeight) => state.setScreenHeight(contentHeight)}
       >
-        <View style={styles.content}>
-          {props.children}
-        </View>
+        {props.children}
       </ScrollView>
     </SafeAreaView>
   );
 };
 
 const containerHooks = () => {
-  const [screenHeight, setScreenHeight] = useState(height);
-
-  const onContentSizeChange = (contentWidth, contentHeight) => {
-    setScreenHeight(contentHeight);
-  };
+  const [screenHeight, setScreenHeight] = useState(0);
 
   return {
     screenHeight,
-    onContentSizeChange,
+    setScreenHeight,
   };
 };
 
@@ -55,7 +49,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flexGrow: 1,
-    justifyContent: 'space-between',
   },
 });
 

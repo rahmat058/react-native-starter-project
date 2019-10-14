@@ -102,6 +102,60 @@ const WelcomeScreen = props => {
               Sign up
             </Text>
           </Button>
+          <Button
+            contentStyle={{
+              paddingVertical: 10,
+            }}
+            mode="contained"
+            onPress={() => props.navigation.navigate('SignUpScreen')}
+          >
+            <Text
+              style={[
+                Typography.rubik24Bold,
+                {
+                  color: Colors.white,
+                },
+              ]}
+            >
+              Sign up
+            </Text>
+          </Button>
+          <Button
+            contentStyle={{
+              paddingVertical: 10,
+            }}
+            mode="contained"
+            onPress={() => props.navigation.navigate('SignUpScreen')}
+          >
+            <Text
+              style={[
+                Typography.rubik24Bold,
+                {
+                  color: Colors.white,
+                },
+              ]}
+            >
+              Sign up
+            </Text>
+          </Button>
+          <Button
+            contentStyle={{
+              paddingVertical: 10,
+            }}
+            mode="contained"
+            onPress={() => props.navigation.navigate('SignUpScreen')}
+          >
+            <Text
+              style={[
+                Typography.rubik24Bold,
+                {
+                  color: Colors.white,
+                },
+              ]}
+            >
+              Sign up
+            </Text>
+          </Button>
 
           <Text
             style={[
