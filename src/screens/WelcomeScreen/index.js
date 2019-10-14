@@ -113,7 +113,7 @@ const WelcomeScreen = props => {
             ]}
           >
             You already have an account?
-            <Text style={{ color: Colors.primary }}> Login</Text>
+            <Text style={{ color: Colors.primary }} onPress={() => props.navigation.navigate('LoginScreen')}> Login</Text>
           </Text>
         </View>
       </View>
