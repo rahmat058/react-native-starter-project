@@ -4,11 +4,13 @@ import { Button, Surface } from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import { Colors, Typography } from 'react-native-ui-lib';
 
+import CommonStyles from '../../styles/common';
+
 const Me = require('../../../assets/images/me-at-office.json');
 
 const WelcomeScreen = props => {
   return (
-    <View style={styles.container}>
+    <View style={CommonStyles.wrapper}>
       <View style={styles.welcomeTopWrapper}>
         <Text
           style={[
@@ -120,11 +122,6 @@ const WelcomeScreen = props => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    marginHorizontal: 20,
-  },
   welcomeTopWrapper: {
     marginTop: 35,
   },

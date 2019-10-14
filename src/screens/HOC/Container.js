@@ -17,7 +17,7 @@ const Container = props => {
   const scrollEnabled = state.screenHeight > height;
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={Colors.primary} />
+      <StatusBar barStyle="light-content" backgroundColor='rgba(117,124,251,.8)' />
       <ScrollView
         style={{ flex: 1 }}
         contentContainerStyle={styles.scrollview}

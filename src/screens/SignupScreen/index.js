@@ -3,11 +3,13 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 import { Button, Surface, TextInput } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
 
+import CommonStyles from '../../styles/common';
+
 const SignUpScreen = props => {
   const state = signUpInScreenHooks(props);
 
   return (
-    <View style={styles.container}>
+    <View style={CommonStyles.wrapper}>
       <View style={styles.welcomeTopWrapper}>
         <Text
           style={[
@@ -144,11 +146,6 @@ const signUpInScreenHooks = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    marginHorizontal: 20,
-  },
   welcomeTopWrapper: {
     marginTop: 35,
   },
