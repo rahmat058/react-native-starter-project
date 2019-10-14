@@ -92,6 +92,19 @@ const LoginScreen = props => {
           onChangeText={text => state.setPassword({ text })}
           style={{ marginTop: 10, borderColor: Colors.gray4 }}
         />
+        <View style={styles.forgotSection}>
+          <Text
+            style={[
+              Typography.h4,
+              {
+                color: Colors.text,
+                top: 5
+              },
+            ]}
+          >
+            Forgot password?
+          </Text>
+        </View>
       </View>
       <View style={styles.bottomSection}>
         <View style={{ marginVertical: 15 }}>
@@ -124,7 +137,11 @@ const LoginScreen = props => {
             ]}
           >
             Don't have an account?
-            <Text style={{ color: Colors.primary }} onPress={() => props.navigation.navigate('SignUpScreen')}> Sign up</Text>
+            <Text
+              style={{ color: Colors.primary }}
+              onPress={() => props.navigation.navigate('SignUpScreen')}
+            > Sign up
+            </Text>
           </Text>
         </View>
       </View>
@@ -174,6 +191,9 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginHorizontal: 10,
   },
+  forgotSection: {
+    alignItems: 'flex-end'
+  }
   // formSurface: {
   //   padding: 10,
   //   height: 70,

@@ -91,7 +91,7 @@ Typography.loadTypographies({
   },
   h4: {
     fontSize: 14,
-    lineHeight: 22,
+    lineHeight: 25,
     fontFamily: fonts.primary,
   },
   p: {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
-import { Button, Surface, TextInput } from 'react-native-paper';
+import { Button, Surface, TextInput, Checkbox } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
 
 import CommonStyles from '../../styles/common';
@@ -93,6 +93,24 @@ const SignUpScreen = props => {
           onChangeText={text => state.setPassword({ text })}
           style={{ marginTop: 10, borderColor: Colors.gray4 }}
         />
+
+        <View style={styles.agreePolicy}>
+          <Checkbox
+            status={state.checked ? 'checked' : 'unchecked'}
+            onPress={() => state.setChecked(!state.checked)}
+          />
+          <Text
+            style={[
+              Typography.h4,
+              {
+                color: Colors.text,
+                top: 5
+              },
+            ]}
+          >
+            I agree with privacy policy
+          </Text>
+        </View>
       </View>
       <View style={styles.bottomSection}>
         <View style={{ marginVertical: 15 }}>
@@ -125,7 +143,11 @@ const SignUpScreen = props => {
             ]}
           >
             You already have an account?
-            <Text style={{ color: Colors.primary }} onPress={() => props.navigation.navigate('LoginScreen')}> Login</Text>
+            <Text
+              style={{ color: Colors.primary }}
+              onPress={() => props.navigation.navigate('LoginScreen')}
+            > Login
+            </Text>
           </Text>
         </View>
       </View>
@@ -136,12 +158,15 @@ const SignUpScreen = props => {
 const signUpInScreenHooks = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [checked, setChecked] = useState(false);
 
   return {
     email,
     setEmail,
     password,
     setPassword,
+    checked,
+    setChecked,
   };
 };
 
@@ -174,6 +199,10 @@ const styles = StyleSheet.create({
     elevation: 15,
     borderRadius: 50,
     marginHorizontal: 10,
+  },
+  agreePolicy: {
+    flexDirection: 'row',
+    marginTop: 5,
   },
   // formSurface: {
   //   padding: 10,
