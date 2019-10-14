@@ -143,8 +143,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bottomSection: {
-    flex: 0.5,
-    marginBottom: 10,
+    marginBottom: 15,
   },
   surface: {
     padding: 10,
