@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 
-// import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const AuthLoadingScreen = props => {
   const loadApp = async () => {
     try {
-      // const value = await AsyncStorage.getItem('userInfo');
-      // const userInfo = JSON.parse(value);
+      const value = await AsyncStorage.getItem('userToken');
 
-      // const screen = userInfo.token !== '' ? 'App' : 'Auth';
-      // props.navigation.navigate(screen);
-      props.navigation.navigate('SplashScreen');
+      const screen = value === 'token123' ? 'App' : 'Auth';
+      props.navigation.navigate(screen);
     } catch (error) {
       console.log(error.message);
     }

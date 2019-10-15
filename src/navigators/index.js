@@ -10,6 +10,8 @@ const AppSwitchNavigator = createSwitchNavigator({
   App: {
     screen: AppDrawerNavigator,
   },
+}, {
+  initialRouteName: 'AuthLoadingScreen',
 });
 
 export const RootAppNavigator = createAppContainer(AppSwitchNavigator);

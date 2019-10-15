@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 import { Button, Surface, TextInput } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import Container from '../HOC/Container';
 import CommonStyles from '../../styles/common';
@@ -115,7 +116,7 @@ const LoginScreen = props => {
                 paddingVertical: 10,
               }}
               mode="contained"
-              onPress={() => props.navigation.navigate('SuccessScreen')}
+              onPress={state.login}
             >
               <Text
                 style={[
@@ -152,15 +153,21 @@ const LoginScreen = props => {
   );
 };
 
-const signUpInScreenHooks = () => {
+const signUpInScreenHooks = props => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const login = async() => {
+    await AsyncStorage.setItem('userToken', 'token123');
+    props.navigation.navigate('App');
+  }
 
   return {
     email,
     setEmail,
     password,
     setPassword,
+    login
   };
 };
 

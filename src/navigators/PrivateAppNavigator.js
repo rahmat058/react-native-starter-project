@@ -13,7 +13,7 @@ import AboutScreen from '../screens/AboutScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const { width } = Dimensions.get('window');
-const drawerWidth = width - 80;
+const drawerWidth = width - 50;
 
 const HomeStackNavigator = createStackNavigator({
   Home: {

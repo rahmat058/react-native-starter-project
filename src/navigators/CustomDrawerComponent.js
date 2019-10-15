@@ -3,13 +3,14 @@ import { View, Text, Dimensions } from 'react-native';
 import { DrawerNavigatorItems } from 'react-navigation-drawer';
 import { Avatar } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import { Icon } from '../utils/fonttello/setFonttelloIcon';
 
 const { height } = Dimensions.get('window');
 
 const customDrawerContentComponent = props => {
-  customDrawerContentComponentHooks(props);
+  const state = customDrawerContentComponentHooks(props);
 
   return (
     <View style={{ flex: 1 }}>
@@ -21,7 +22,7 @@ const customDrawerContentComponent = props => {
         }}
       >
         <Avatar.Image
-          size={160}
+          size={120}
           source={require('../../assets/images/pages/profile.png')}
           style={{ backgroundColor: Colors.gray4 }}
         />
@@ -29,7 +30,7 @@ const customDrawerContentComponent = props => {
         <View style={{marginTop: 15}}>
           <Text
             style={[
-              Typography.rubik24Bold,
+              Typography.rubik20Bold,
               {
                 color: Colors.gray3,
                 textAlign: 'center'
@@ -40,7 +41,7 @@ const customDrawerContentComponent = props => {
           </Text>
           <Text
             style={[
-              Typography.rubik20Bold,
+              Typography.rubik18,
               {
                 color: Colors.gray3,
               },
@@ -59,7 +60,7 @@ const customDrawerContentComponent = props => {
         <Icon name="sign-out-alt" size={25} color={Colors.red} />
         <Text
           style={{ color: Colors.red, fontSize: 20, paddingLeft: 30 }}
-          onPress={() => props.navigation.navigate('LoginScreen')}
+          onPress={state.loginOut}
         >
           Sign Out
         </Text>
@@ -70,6 +71,14 @@ const customDrawerContentComponent = props => {
 
 const customDrawerContentComponentHooks = props => {
   console.log('props: ', props);
+  
+  const loginOut = async() => {
+    await AsyncStorage.clear();
+    props.navigation.navigate('LoginScreen');
+  }
+  return {
+    loginOut
+  }
 };
 
 export default customDrawerContentComponent;
