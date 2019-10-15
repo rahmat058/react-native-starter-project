@@ -11,8 +11,8 @@ const ScreenOne = props => {
   return (
     <>
       <Appbar.Header>
-        <Appbar.BackAction onPress={state.goBack} />
-        <Appbar.Content title="Sub Home" />
+        <Appbar.BackAction onPress={state.goBack} color={Colors.white} />
+        <Appbar.Content title="Sub Home" color={Colors.white} />
       </Appbar.Header>
 
       <View

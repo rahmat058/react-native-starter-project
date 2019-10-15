@@ -12,7 +12,7 @@ const AboutScreen = props => {
     <>
       <Appbar.Header>
         <Appbar.Action icon={state.barIcon} onPress={state.toggleDrawer} />
-        <Appbar.Content title="About" />
+        <Appbar.Content title="About" color={Colors.white} />
       </Appbar.Header>
 
       <View

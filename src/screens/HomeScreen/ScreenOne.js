@@ -12,7 +12,7 @@ const ScreenOne = props => {
     <>
       <Appbar.Header>
         <Appbar.Action icon={state.barIcon} onPress={state.toggleDrawer} />
-        <Appbar.Content title="Home" />
+        <Appbar.Content title="Home" color={Colors.white} />
       </Appbar.Header>
 
       <View
@@ -41,7 +41,16 @@ const ScreenOne = props => {
             mode="contained"
             onPress={() => props.navigation.navigate('SubHome')}
           >
-            Next
+            <Text
+              style={[
+                Typography.rubik24Bold,
+                {
+                  color: Colors.white,
+                },
+              ]}
+            >
+              Next
+            </Text>
           </Button>
         </View>
       </View>
