@@ -10,7 +10,7 @@
     "clean:debug": "cd android/ && ./gradlew clean && cd .. && react-native run-android --appIdSuffix debug",
     "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
     "clean:build": "cd android/ && ./gradlew clean &&  ./gradlew assembleRelease",
-    "android:build": "cd android && ./gradlew assembleRelease",
+    "android:build": "cd android  && ./gradlew assembleRelease",
     "android:bundle": "cd android && ./gradlew bundleRelease",
     "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
     "android:menu": "adb shell input keyevent 82",

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
 
+import Container from '../HOC/Container';
+
 const appLogo = require('../../../assets/images/app-logo.png');
 
 const { height } = Dimensions.get('window');
@@ -9,7 +11,7 @@ const SplashScreen = props => {
   const state = splashScreenHooks(props);
 
   return (
-    <>
+    <Container>
       <View style={styles.container}>
         <Animated.Image
           source={appLogo}
@@ -17,7 +19,7 @@ const SplashScreen = props => {
           resizeMode="contain"
         />
       </View>
-    </>
+    </Container>
   );
 };
 
