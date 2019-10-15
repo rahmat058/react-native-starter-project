@@ -4,12 +4,13 @@ import { Appbar } from 'react-native-paper';
 import { Typography, Colors } from 'react-native-ui-lib';
 
 import { Icon } from '../../utils/fonttello/setFonttelloIcon';
+import Container from '../HOC/Container';
 
 const SettingsScreen = props => {
   const state = screenOneHooks(props);
 
   return (
-    <>
+    <Container>
       <Appbar.Header>
         <Appbar.Action icon={state.barIcon} onPress={state.toggleDrawer} />
         <Appbar.Content title="Settings" color={Colors.white} />
@@ -33,7 +34,7 @@ const SettingsScreen = props => {
           Settings Screen
         </Text>
       </View>
-    </>
+    </Container>
   );
 };
 

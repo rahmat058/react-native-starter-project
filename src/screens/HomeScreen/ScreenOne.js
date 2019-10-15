@@ -4,12 +4,13 @@ import { Appbar, Button } from 'react-native-paper';
 import { Typography, Colors } from 'react-native-ui-lib';
 
 import { Icon } from '../../utils/fonttello/setFonttelloIcon';
+import Container from '../HOC/Container';
 
 const ScreenOne = props => {
   const state = screenOneHooks(props);
 
   return (
-    <>
+    <Container>
       <Appbar.Header>
         <Appbar.Action icon={state.barIcon} onPress={state.toggleDrawer} />
         <Appbar.Content title="Home" color={Colors.white} />
@@ -54,7 +55,7 @@ const ScreenOne = props => {
           </Button>
         </View>
       </View>
-    </>
+    </Container>
   );
 };
 

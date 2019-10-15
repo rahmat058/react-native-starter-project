@@ -4,12 +4,13 @@ import { Appbar } from 'react-native-paper';
 import { Typography, Colors } from 'react-native-ui-lib';
 
 import { Icon } from '../../utils/fonttello/setFonttelloIcon';
+import Container from '../HOC/Container';
 
 const AboutScreen = props => {
   const state = aboutScreenHooks(props);
 
   return (
-    <>
+    <Container>
       <Appbar.Header>
         <Appbar.Action icon={state.barIcon} onPress={state.toggleDrawer} />
         <Appbar.Content title="About" color={Colors.white} />
@@ -33,7 +34,7 @@ const AboutScreen = props => {
           About Screen
         </Text>
       </View>
-    </>
+    </Container>
   );
 };
 
