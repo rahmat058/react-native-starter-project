@@ -69,13 +69,12 @@ const customDrawerContentComponent = props => {
   );
 };
 
-const customDrawerContentComponentHooks = props => {
-  console.log('props: ', props);
-  
+const customDrawerContentComponentHooks = props => {  
   const loginOut = async() => {
     await AsyncStorage.clear();
     props.navigation.navigate('LoginScreen');
   }
+  
   return {
     loginOut
   }
