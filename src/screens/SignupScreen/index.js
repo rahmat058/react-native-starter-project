@@ -3,135 +3,67 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 import { Button, Surface, TextInput, Checkbox } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
 
+import Container from '../HOC/Container';
 import CommonStyles from '../../styles/common';
 
 const SignUpScreen = props => {
   const state = signUpInScreenHooks(props);
 
   return (
-    <View style={CommonStyles.wrapper}>
-      <View style={styles.welcomeTopWrapper}>
-        <Text
-          style={[
-            Typography.title,
-            {
-              color: Colors.primary,
-            },
-          ]}
-        >
-          Sign Up
-        </Text>
-        <Text
-          style={[
-            Typography.p,
-            {
-              color: Colors.text,
-              marginTop: 20,
-            },
-          ]}
-        >
-          Please Registration witn email and sign up {'\n'} to continue using
-          our app.
-        </Text>
-      </View>
-      <View style={styles.contentLogoWrapper}>
-        <Text
-          style={[
-            Typography.rubik18,
-            {
-              color: Colors.primary,
-              marginTop: 20,
-              textAlign: 'center',
-            },
-          ]}
-        >
-          Enter via Social Networks
-        </Text>
-
-        <View style={styles.socialLogoSection}>
-          <Surface style={styles.surface}>
-            <Image
-              style={{ width: 25, height: 25 }}
-              source={require('../../../assets/images/facebook.png')}
-            />
-          </Surface>
-          <Surface style={styles.surface}>
-            <Image
-              style={{ width: 25, height: 25 }}
-              source={require('../../../assets/images/twitter.png')}
-            />
-          </Surface>
-        </View>
-
-        <Text
-          style={[
-            Typography.rubik16,
-            {
-              color: Colors.text,
-              marginTop: 20,
-              textAlign: 'center',
-            },
-          ]}
-        >
-          or login with {'\n'} enail
-        </Text>
-      </View>
-
-      <View style={styles.formWrapper}>
-        <TextInput
-          label="Email"
-          value={state.email}
-          type="text"
-          mode="outlined"
-          onChangeText={text => state.setEmail({ text })}
-        />
-        <TextInput
-          label="Password"
-          value={state.password}
-          type="text"
-          mode="outlined"
-          onChangeText={text => state.setPassword({ text })}
-          style={{ marginTop: 10, borderColor: Colors.gray4 }}
-        />
-
-        <View style={styles.agreePolicy}>
-          <Checkbox
-            status={state.checked ? 'checked' : 'unchecked'}
-            onPress={() => state.setChecked(!state.checked)}
-          />
+    <Container>
+      <View style={CommonStyles.wrapper}>
+        <View style={styles.welcomeTopWrapper}>
           <Text
             style={[
-              Typography.h4,
+              Typography.title,
               {
-                color: Colors.text,
-                top: 5
+                color: Colors.primary,
               },
             ]}
           >
-            I agree with privacy policy
+            Sign Up
+          </Text>
+          <Text
+            style={[
+              Typography.p,
+              {
+                color: Colors.text,
+                marginTop: 20,
+              },
+            ]}
+          >
+            Please Registration witn email and sign up {'\n'} to continue using
+            our app.
           </Text>
         </View>
-      </View>
-      <View style={styles.bottomSection}>
-        <View style={{ marginVertical: 15 }}>
-          <Button
-            contentStyle={{
-              paddingVertical: 10,
-            }}
-            mode="contained"
-            onPress={() => props.navigation.navigate('LoginScreen')}
+        <View style={styles.contentLogoWrapper}>
+          <Text
+            style={[
+              Typography.rubik18,
+              {
+                color: Colors.primary,
+                marginTop: 20,
+                textAlign: 'center',
+              },
+            ]}
           >
-            <Text
-              style={[
-                Typography.rubik24Bold,
-                {
-                  color: Colors.white,
-                },
-              ]}
-            >
-              Sign up
-            </Text>
-          </Button>
+            Enter via Social Networks
+          </Text>
+
+          <View style={styles.socialLogoSection}>
+            <Surface style={styles.surface}>
+              <Image
+                style={{ width: 25, height: 25 }}
+                source={require('../../../assets/images/facebook.png')}
+              />
+            </Surface>
+            <Surface style={styles.surface}>
+              <Image
+                style={{ width: 25, height: 25 }}
+                source={require('../../../assets/images/twitter.png')}
+              />
+            </Surface>
+          </View>
 
           <Text
             style={[
@@ -139,19 +71,90 @@ const SignUpScreen = props => {
               {
                 color: Colors.text,
                 marginTop: 20,
+                textAlign: 'center',
               },
             ]}
           >
-            You already have an account?
-            <Text
-              style={{ color: Colors.primary }}
-              onPress={() => props.navigation.navigate('LoginScreen')}
-            > Login
-            </Text>
+            or login with {'\n'} enail
           </Text>
         </View>
+
+        <View style={styles.formWrapper}>
+          <TextInput
+            label="Email"
+            value={state.email}
+            type="text"
+            mode="outlined"
+            onChangeText={text => state.setEmail({ text })}
+          />
+          <TextInput
+            label="Password"
+            value={state.password}
+            type="text"
+            mode="outlined"
+            onChangeText={text => state.setPassword({ text })}
+            style={{ marginTop: 10, borderColor: Colors.gray4 }}
+          />
+
+          <View style={styles.agreePolicy}>
+            <Checkbox
+              status={state.checked ? 'checked' : 'unchecked'}
+              onPress={() => state.setChecked(!state.checked)}
+            />
+            <Text
+              style={[
+                Typography.h4,
+                {
+                  color: Colors.text,
+                  top: 5,
+                },
+              ]}
+            >
+              I agree with privacy policy
+            </Text>
+          </View>
+        </View>
+        <View style={styles.bottomSection}>
+          <View style={{ marginVertical: 15 }}>
+            <Button
+              contentStyle={{
+                paddingVertical: 10,
+              }}
+              mode="contained"
+              onPress={() => props.navigation.navigate('LoginScreen')}
+            >
+              <Text
+                style={[
+                  Typography.rubik24Bold,
+                  {
+                    color: Colors.white,
+                  },
+                ]}
+              >
+                Sign up
+              </Text>
+            </Button>
+
+            <Text
+              style={[
+                Typography.rubik16,
+                {
+                  color: Colors.text,
+                  marginTop: 20,
+                },
+              ]}
+            >
+              You already have an account?
+              <Text
+                style={{ color: Colors.primary }}
+                onPress={() => props.navigation.navigate('LoginScreen')}
+              > Login
+              </Text>
+            </Text>
+          </View>
+        </View>
       </View>
-    </View>
+    </Container>
   );
 };
 
