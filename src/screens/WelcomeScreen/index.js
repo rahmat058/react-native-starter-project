@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     marginTop: 35,
   },
   lottieViewWrapper: {
-    flex: 2,
+    flex: 3,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
   },
   surface: {
     padding: 10,
-    height: 70,
-    width: 70,
+    height: 60,
+    width: 60,
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 15,

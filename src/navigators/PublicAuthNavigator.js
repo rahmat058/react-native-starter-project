@@ -13,6 +13,12 @@ export const AuthStackNavigator = createStackNavigator({
       header: null,
     }),
   },
+  LoginScreen: {
+    screen: LoginScreen,
+    navigationOptions: () => ({
+      header: null,
+    }),
+  },
   WelcomeScreen: {
     screen: WelcomeScreen,
     navigationOptions: () => ({
@@ -21,12 +27,6 @@ export const AuthStackNavigator = createStackNavigator({
   },
   SignUpScreen: {
     screen: SignUpScreen,
-    navigationOptions: () => ({
-      header: null,
-    }),
-  },
-  LoginScreen: {
-    screen: LoginScreen,
     navigationOptions: () => ({
       header: null,
     }),
