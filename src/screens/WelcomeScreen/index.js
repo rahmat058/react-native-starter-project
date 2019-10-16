@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, StyleSheet, Text, Image, BackHandler, Alert } from 'react-native';
 import { Button, Surface } from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import { Colors, Typography } from 'react-native-ui-lib';
@@ -10,6 +10,8 @@ import CommonStyles from '../../styles/common';
 const Me = require('../../../assets/images/me-at-office.json');
 
 const WelcomeScreen = props => {
+  welcomeScreenHooks(props);
+
   return (
     <Container>
       <View style={CommonStyles.wrapper}>
@@ -127,6 +129,37 @@ const WelcomeScreen = props => {
     </Container>
   );
 };
+
+const welcomeScreenHooks = (props) => {
+  const screen = props.navigation.state.routeName;
+  console.log('screen', screen);
+
+  const handleBackButtonClick = () => {
+    if (screen === 'WelcomeScreen') {
+      Alert.alert(
+        'Exit App',
+        'Exiting the application?', [{
+            text: 'Cancel',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel'
+        }, {
+            text: 'OK',
+            onPress: () => BackHandler.exitApp()
+        }, ], {
+            cancelable: false
+        }
+     )
+    }
+   return true;
+  }
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', handleBackButtonClick);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', handleBackButtonClick);
+    };
+  }, [])
+}
 
 const styles = StyleSheet.create({
   welcomeTopWrapper: {
