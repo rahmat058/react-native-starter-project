@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Text, Image, BackHandler } from 'react-native';
 import { Button, Surface, TextInput, Checkbox } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
 
@@ -158,10 +158,22 @@ const SignUpScreen = props => {
   );
 };
 
-const signUpInScreenHooks = () => {
+const signUpInScreenHooks = props => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [checked, setChecked] = useState(false);
+
+  const handleBackButtonClick = () => {
+    props.navigation.goBack();
+    return true;
+  }
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', handleBackButtonClick);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', handleBackButtonClick);
+    };
+  }, []);
 
   return {
     email,

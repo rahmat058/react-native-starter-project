@@ -11,9 +11,7 @@ const AppSwitchNavigator = createAnimatedSwitchNavigator(
   {
     AuthLoadingScreen,
     Auth: AuthStackNavigator,
-    App: {
-      screen: AppDrawerNavigator,
-    },
+    App: AppDrawerNavigator
   },
   {
     initialRouteName: 'AuthLoadingScreen',
@@ -21,7 +19,7 @@ const AppSwitchNavigator = createAnimatedSwitchNavigator(
       <Transition.Together>
         <Transition.Out
           type="slide-bottom"
-          durationMs={400}
+          durationMs={300}
           interpolation="easeIn"
         />
         <Transition.In type="fade" durationMs={500} />

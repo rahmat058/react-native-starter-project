@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Text, Image, BackHandler } from 'react-native';
 import { Button, Surface, TextInput } from 'react-native-paper';
 import { Colors, Typography } from 'react-native-ui-lib';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -157,24 +157,35 @@ const signUpInScreenHooks = props => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const login = async() => {
+  const handleBackButtonClick = () => {
+    props.navigation.goBack();
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', handleBackButtonClick);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', handleBackButtonClick);
+    };
+  }, []);
+
+  const login = async () => {
     await AsyncStorage.setItem('userToken', 'token123');
     const success = props.navigation.navigate('SuccessScreen');
 
     if (success) {
       setTimeout(() => {
         props.navigation.navigate('App');
-      }, 1000)
+      }, 3000);
     }
-
-  }
+  };
 
   return {
     email,
     setEmail,
     password,
     setPassword,
-    login
+    login,
   };
 };
 
