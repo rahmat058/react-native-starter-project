@@ -34,7 +34,7 @@ const splashScreenHooks = props => {
       // animation by sequence
       Animated.timing(logoOpacity, {
         toValue: 1,
-        duration: 1200,
+        duration: 1500,
       }),
       // animate text
       Animated.timing(titleMarginTop, {

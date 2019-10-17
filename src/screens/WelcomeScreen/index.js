@@ -3,6 +3,8 @@ import { View, StyleSheet, Text, Image, BackHandler, Alert } from 'react-native'
 import { Button, Surface } from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import { Colors, Typography } from 'react-native-ui-lib';
+import SplashScreen from 'react-native-splash-screen';
+
 
 import Container from '../HOC/Container';
 import CommonStyles from '../../styles/common';
@@ -154,6 +156,7 @@ const welcomeScreenHooks = (props) => {
   }
 
   useEffect(() => {
+    SplashScreen.hide();
     BackHandler.addEventListener('hardwareBackPress', handleBackButtonClick);
     return () => {
       BackHandler.removeEventListener('hardwareBackPress', handleBackButtonClick);

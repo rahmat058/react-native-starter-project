@@ -1,16 +1,16 @@
 import { Easing, Animated } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import SplashScreen from '../screens/SplashScreen';
+// import SplashScreen from '../screens/SplashScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import SignUpScreen from '../screens/SignupScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SuccessScreen from '../screens/SuccessScreen';
 
 export const AuthStackNavigator = createStackNavigator({
-  SplashScreen,
-  LoginScreen,
+  // SplashScreen,
   WelcomeScreen,
+  LoginScreen,
   SignUpScreen,
   SuccessScreen
 }, {
