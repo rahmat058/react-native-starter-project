@@ -24,7 +24,7 @@
     "@react-native-community/netinfo": "^4.3.0",
     "axios": "^0.19.0",
     "i18n-js": "^3.3.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lottie-react-native": "^3.2.1",
     "moment": "^2.24.0",
     "react": "16.9.0",
