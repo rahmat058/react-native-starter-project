@@ -28,7 +28,7 @@
     "lottie-react-native": "^3.2.1",
     "moment": "^2.24.0",
     "react": "16.9.0",
-    "react-native": "0.61.2",
+    "react-native": "0.62.3",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-lightbox": "^0.8.0",
     "react-native-linear-gradient": "^2.5.6",
